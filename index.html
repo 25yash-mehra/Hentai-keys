@@ -6,33 +6,70 @@
     <title>javascript piano</title>
 </head>
 <style>
-     body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-      h1, h2 {
-            text-align: center;
-            color: #00ff00; /* Neon green color */
-        }
-        #background-text {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            text-align: center;
-            opacity: 0.5;
-            text-shadow: 2px 2px 4px #00ff00;
-            pointer-events: none; /* Prevent clicking on the background text */
-        }
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00ff00; /* Neon green color */
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+#background-text {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.5;
+    text-shadow: 2px 2px 4px #00ff00;
+    pointer-events: none; /* Prevent clicking on the background text */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    font-style: italic;
+}
+
 </style>
 <body>
     <div id="background-text">Use headphones for better experience</div>
-    <h1 style="text-align: center;"> available :- A,S,D,F,G (the project is incomplete!!)</h1>
+    <h1 style="text-align: center;">project is still incomplete</h1>
     <h2 style="text-align: center;"></h2>
     <script src="./sctipt.js"></script>
 </body>
